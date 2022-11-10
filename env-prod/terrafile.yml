@@ -1,0 +1,3 @@
+tf-aws-vpc:
+  source:  "https://github.com/sumayya-005/tf-module-vpc"
+  version: "1.0.0"
