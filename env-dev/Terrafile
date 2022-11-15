@@ -1,3 +1,11 @@
 vpc:
   source:  "https://github.com/sumayya-005/tf-module-vpc"
   version: "main"
+
+docdb:
+  source:  "https://github.com/sumayya-005/tf-module-docdb"
+  version: "main"
+
+rds:
+  source:  "https://github.com/sumayya-005/tf-module-rds"
+  version: "main"
