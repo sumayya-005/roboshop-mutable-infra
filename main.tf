@@ -1,4 +1,4 @@
-terraform "" {
-  source = "github.com/hashicorp/example"
+module "vpc" {
+  source = "github.com/sumayya-005/tf-module-vpc"
 }
 
