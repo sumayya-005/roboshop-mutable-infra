@@ -13,6 +13,7 @@ vpc = {
         cidr_block = ["10.0.4.0/24", "10.0.5.0/24"]
       }
     }
+    subnet_availability_zones = ["us-east-1a" , "us-east-1b"]
   }
 }
 
