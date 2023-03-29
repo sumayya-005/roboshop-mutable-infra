@@ -1,4 +1,4 @@
-output "vpc" {
-  value = module.vpc.vpc
-}
+#output "vpc" {
+#  value = module.vpc.vpc
+#}
 
