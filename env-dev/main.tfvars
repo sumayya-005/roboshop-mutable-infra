@@ -16,7 +16,7 @@ vpc = {
         name ="app"
       }
     }
-#    subnet_availability_zones = ["us-east-1a" , "us-east-1b"]
+    subnet_availability_zones = ["us-east-1a" , "us-east-1b"]
   }
 }
 
