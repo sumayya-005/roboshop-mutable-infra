@@ -9,5 +9,9 @@ module "vpc"  {
 #  source   = "./vendor/modules/docdb"
 #  docdb    = var.docdb
 #  env      = var.env
-#
+# subnets   = lookup (local.subnets, "database" ,null)
 #}
+
+output "merged" {
+  value = merge()
+}
