@@ -36,4 +36,11 @@ management_vpc = {
   route_tables = "rtb-039ab10ca18c7f904"
   vpc_cidr = "172.31.0.0/16"
 }
+
+docdb = {
+  db1 ={
+
+  }
+}
+
 env = "dev"
