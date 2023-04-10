@@ -10,16 +10,21 @@ module "vpc" {
   management_vpc            = var.management_vpc
 }
 
-#module "docdb"  {
-#  source   = "./vendor/modules/docdb"
-#  docdb    = var.docdb
-#  env      = var.env
-# subnets   = local.database_private_subnets[*].id
-#}
-#
+module "docdb"  {
+  for_each = var.docdb
+  source   = "./vendor/modules/docd"
+  docdb    = var.docdb
+  env      = var.env
+ subnets   = local.database_private_subnets[*].id
+}
+
 #module "rds" {
 #  source = "./vendor/modules/rds"
 #  rds    = var.rds
 #  env    = var.env
 #  subnets = local.database_private_subnets[*].id
 #}
+
+output "app_subnets" {
+  value = lookup(module.vpc)
+}
