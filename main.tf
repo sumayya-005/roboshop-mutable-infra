@@ -2,7 +2,7 @@ module "vpc" {
   for_each = var.vpc
   source = "./vendor/modules/vpc"
   cidr_block = each.value.cidr_block
-  additional_cidr_block = each.value. additonal_cidr_block
+  additional_cidr_block = each.value. additional_cidr_block
   subnet_availability_zones = each.value.subnet_availability_zones
   private_subnets = each.value.private_subnets
   public_subnets = each.value.public_subnets
