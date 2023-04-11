@@ -26,5 +26,5 @@ module "docdb"  {
 #}
 
 output "app_subnets" {
-  value = lookup(module.vpc)
+  value = lookup()
 }
