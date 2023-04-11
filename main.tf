@@ -45,6 +45,11 @@ module "elasticache" {
   num_cache_nodes = each.value.num_cache_nodes
 }
 
-#output "app_subnets" {
-#  value = [ for i,j in module.vpc : j.private_subnets ["app"]["subnets"]]
-#}
+module "rabbitmq" {
+  source = "./vendor/modules/rabbitmq"
+  for_each = var.rabbitmq
+  env      = var.env
+  subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+  name = each.key
+  instance_type =each.value.instance_type
+}
