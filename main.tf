@@ -62,5 +62,6 @@ module "cart" {
   for_each = var.apps
   name = each.key
   instance_type =each.value.instance_type
-  min_size
+  min_size      = each.value.min_size
+  max_size       =each.value.max.size
 }
