@@ -25,6 +25,6 @@ module "docdb" {
 #  subnets = local.database_private_subnets[*].id
 #}
 
-output "app_subnets" {
-  value = [ for i,j in module.vpc : j.private_subnets ["app"]["subnets"]]
-}
+#output "app_subnets" {
+#  value = [ for i,j in module.vpc : j.private_subnets ["app"]["subnets"]]
+#}
