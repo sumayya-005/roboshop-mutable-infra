@@ -17,3 +17,7 @@ elasticache:
 rabbitmq:
   source: "https://github.com/sumayya-005/tf-module-rabbitmq"
   version: "main"
+
+app_setup:
+  source: "https://github.com/sumayya-005/tf-module-mutable-app-set-up"
+  version: "main"

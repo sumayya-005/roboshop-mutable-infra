@@ -69,3 +69,9 @@ rabbitmq = {
     instance_type ="t3.micro"
   }
 }
+
+apps = {
+  cart ={
+    instance_type = "t3.micro"
+  }
+}

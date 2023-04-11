@@ -53,3 +53,11 @@ module "rabbitmq" {
   name = each.key
   instance_type =each.value.instance_type
 }
+
+
+module "cart" {
+  source = "./vendor/modules/app-setup"
+  env    = var.env
+  subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+
+}
