@@ -39,30 +39,30 @@ management_vpc = {
   vpc_cidr = "172.31.0.0/16"
 }
 
-docdb = {
-  db1 ={
-    engine = "docdb"
-  }
-}
-
-rds = {
- db1 = {
-   allocated_storage    = 10
-   engine               = "mysql"
-   engine_version       = "5.7.mysql_aurora.2.10.2"
-   instance_class       = "db.t3.micro"
-   skip_final_snapshot  = true
- }
-}
-
-elasticache = {
-    ec1 = {
-      engine          = "redis"
-      engine_version  = "6.2"
-      node_type       = "cache.t3.micro"
-      num_cache_nodes = 1
-    }
-}
+#docdb = {
+#  db1 ={
+#    engine = "docdb"
+#  }
+#}
+#
+#rds = {
+# db1 = {
+#   allocated_storage    = 10
+#   engine               = "mysql"
+#   engine_version       = "5.7.mysql_aurora.2.10.2"
+#   instance_class       = "db.t3.micro"
+#   skip_final_snapshot  = true
+# }
+#}
+#
+#elasticache = {
+#    ec1 = {
+#      engine          = "redis"
+#      engine_version  = "6.2"
+#      node_type       = "cache.t3.micro"
+#      num_cache_nodes = 1
+#    }
+#}
 
 #rabbitmq = {
 #  mq1 = {
