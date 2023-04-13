@@ -31,6 +31,7 @@ module "rds" {
   engine_version      = each.value.engine_version
   instance_class      = each.value.instance_class
   skip_final_snapshot = each.value.skip_final_snapshot
+  port_no             = each.value.port_no
 }
 
 module "elasticache" {
