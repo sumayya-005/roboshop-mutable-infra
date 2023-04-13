@@ -73,9 +73,10 @@ rabbitmq = {
 apps = {
   cart ={
     instance_type = "t3.micro"
-    desired_capacity   = 1
+#    desired_capacity   = 1
     max_size           = 1
     min_size           = 1
+    port_no            = 8080
   }
 }
 
