@@ -1,9 +1,9 @@
 variable "vpc" {}
 variable "env" {}
 variable "management_vpc" {}
-#variable "docdb" {}
-#variable "rds" {}
-#variable "elasticache" {}
-#variable "rabbitmq" {}
-#variable "apps" {}
-#variable "BASTION_NODE" {}
+variable "docdb" {}
+variable "rds" {}
+variable "elasticache" {}
+variable "rabbitmq" {}
+variable "apps" {}
+variable "BASTION_NODE" {}
