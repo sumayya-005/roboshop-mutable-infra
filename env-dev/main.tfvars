@@ -39,44 +39,45 @@ management_vpc = {
   vpc_cidr = "172.31.0.0/16"
 }
 
-#docdb = {
-#  db1 ={
-#    engine = "docdb"
-#  }
-#}
-#
-#rds = {
-# db1 = {
-#   allocated_storage    = 10
-#   engine               = "mysql"
-#   engine_version       = "5.7.mysql_aurora.2.10.2"
-#   instance_class       = "db.t3.micro"
-#   skip_final_snapshot  = true
-# }
-#}
-#
-#elasticache = {
-#    ec1 = {
-#      engine          = "redis"
-#      engine_version  = "6.2"
-#      node_type       = "cache.t3.micro"
-#      num_cache_nodes = 1
-#    }
-#}
-#
-#rabbitmq = {
-#  mq1 = {
-#    instance_type ="t3.micro"
-#  }
-#}
-#
-#apps = {
-#  cart ={
-#    instance_type = "t3.micro"
-#    desired_capacity   = 1
-#    max_size           = 1
-#    min_size           = 1
-#  }
-#}
-#
-#BASTION_NODE = "172.31.2.185/32"
+docdb = {
+  db1 ={
+    engine = "docdb"
+  }
+}
+
+rds = {
+ db1 = {
+   allocated_storage    = 10
+   engine               = "mysql"
+   engine_version       = "5.7.mysql_aurora.2.10.2"
+   instance_class       = "db.t3.micro"
+   skip_final_snapshot  = true
+ }
+}
+
+elasticache = {
+    ec1 = {
+      engine          = "redis"
+      engine_version  = "6.2"
+      node_type       = "cache.t3.micro"
+      num_cache_nodes = 1
+    }
+}
+
+rabbitmq = {
+  mq1 = {
+    instance_type ="t3.micro"
+  }
+}
+
+apps = {
+  cart ={
+    instance_type = "t3.micro"
+    desired_capacity   = 1
+    max_size           = 1
+    min_size           = 1
+  }
+}
+
+BASTION_NODE = "172.31.2.185/32"
+PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
