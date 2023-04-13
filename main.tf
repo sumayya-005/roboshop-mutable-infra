@@ -57,13 +57,14 @@ module "rabbitmq" {
 
 
 module "cart" {
-  source = "./vendor/modules/app-setup"
-  env    = var.env
-  subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
-  for_each = var.apps
-  name = each.key
-  instance_type =each.value.instance_type
+  source        = "./vendor/modules/app-setup"
+  env           = var.env
+  subnets       = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+  for_each      = var.apps
+  name          = each.key
+  instance_type = each.value.instance_type
   min_size      = each.value.min_size
-  max_size       =each.value.max.size
- vpc_id         = element([for i,j in module.vpc : j.vpc_id ],0)
-}
+  max_size      = each.value.max.size
+  P
+  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0
+    }
