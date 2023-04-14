@@ -6,10 +6,10 @@ docdb:
     source: "https://github.com/sumayya-005/tf-module-docdb"
     version: "main"
 
-#rds:
-#  source: "https://github.com/sumayya-005/tf-module-rds"
-#  version: "main"
-#
+rds:
+  source: "https://github.com/sumayya-005/tf-module-rds"
+  version: "main"
+
 #elasticache:
 #  source: "https://github.com/sumayya-005/tf-module-elasticache"
 #  version: "main"
