@@ -39,12 +39,12 @@ management_vpc = {
   vpc_cidr = "172.31.0.0/16"
 }
 
-#docdb = {
-#  db1 ={
-#    engine = "docdb"
-#  }
-#}
-#
+docdb = {
+  db1 ={
+    engine = "docdb"
+  }
+}
+
 #rds = {
 # db1 = {
 #   allocated_storage    = 10
