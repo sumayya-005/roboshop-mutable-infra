@@ -20,19 +20,19 @@ module "docdb" {
 }
 
 
-module "rds" {
-  source              = "./vendor/modules/rds"
-  for_each            = var.rds
-  env                 = var.env
-  subnets             = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
-  name                = each.key.name
-  allocated_storage   = each.value.allocated_storage
-  engine              = each.value.engine
-  engine_version      = each.value.engine_version
-  instance_class      = each.value.instance_class
-  skip_final_snapshot = each.value.skip_final_snapshot
-}
-#
+#module "rds" {
+#  source              = "./vendor/modules/rds"
+#  for_each            = var.rds
+#  env                 = var.env
+#  subnets             = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+#  name                = each.key.name
+#  allocated_storage   = each.value.allocated_storage
+#  engine              = each.value.engine
+#  engine_version      = each.value.engine_version
+#  instance_class      = each.value.instance_class
+#  skip_final_snapshot = each.value.skip_final_snapshot
+#}
+##
 #module "elasticache" {
 #  source = "./vendor/modules/elasticache"
 #  for_each = var.elasticache
