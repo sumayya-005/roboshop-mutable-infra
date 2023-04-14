@@ -112,6 +112,12 @@ apps = {
 
 }
 
+alb = {
+  alb1 ={
+
+  }
+
+}
 BASTION_NODE = "172.31.2.185/32"
 PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
 PROMETHEUES_NODE = ""
