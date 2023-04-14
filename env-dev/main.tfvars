@@ -72,12 +72,44 @@ rabbitmq = {
 
 apps = {
   cart ={
-    instance_type = "t3.micro"
-#    desired_capacity   = 1
+    instance_type      = "t3.micro"
     max_size           = 1
     min_size           = 1
     port_no            = 8080
   }
+
+  catalogue ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+  }
+  user ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+  }
+  shipping ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+  }
+  payment ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+  }
+
+  frontend ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+  }
+
 }
 
 BASTION_NODE = "172.31.2.185/32"
