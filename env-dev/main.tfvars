@@ -113,8 +113,12 @@ apps = {
 }
 
 alb = {
-  alb1 ={
+  public ={
+    internal = false
 
+  }
+  private = {
+    internal = true
   }
 
 }
