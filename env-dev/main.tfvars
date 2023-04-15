@@ -55,20 +55,20 @@ rds = {
  }
 }
 
-elasticache = {
-    ec1 = {
-      engine          = "redis"
-      engine_version  = "6.2"
-      node_type       = "cache.t3.micro"
-      num_cache_nodes = 1
-    }
-}
-
-rabbitmq = {
-  mq1 = {
-    instance_type ="t3.micro"
-  }
-}
+#elasticache = {
+#    ec1 = {
+#      engine          = "redis"
+#      engine_version  = "6.2"
+#      node_type       = "cache.t3.micro"
+#      num_cache_nodes = 1
+#    }
+#}
+#
+#rabbitmq = {
+#  mq1 = {
+#    instance_type ="t3.micro"
+#  }
+#}
 
 #apps = {
 #  cart ={
