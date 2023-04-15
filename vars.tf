@@ -4,7 +4,7 @@ variable "management_vpc" {}
 variable "docdb" {}
 variable "rds" {}
 variable "elasticache" {}
-#variable "rabbitmq" {}
+variable "rabbitmq" {}
 #variable "apps" {}
 #variable "alb" {}
 #variable "BASTION_NODE" {}
