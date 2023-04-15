@@ -7,7 +7,7 @@ docdb:
     version: "main"
 
 rds:
-  source: "https://github.com/sumayya-005/tf-module-rds"
+  source:  "https://github.com/sumayya-005/tf-module-rds"
   version: "main"
 
 #elasticache:
