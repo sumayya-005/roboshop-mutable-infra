@@ -64,12 +64,12 @@ elasticache = {
     }
 }
 
-#rabbitmq = {
-#  mq1 = {
-#    instance_type ="t3.micro"
-#  }
-#}
-#
+rabbitmq = {
+  mq1 = {
+    instance_type ="t3.micro"
+  }
+}
+
 #apps = {
 #  cart ={
 #    instance_type      = "t3.micro"
