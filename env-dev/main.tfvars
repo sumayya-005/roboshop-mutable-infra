@@ -45,97 +45,97 @@ docdb = {
   }
 }
 
-rds = {
- db1 = {
-   allocated_storage    = 10
-   engine               = "mysql"
-   engine_version       = "5.7.mysql_aurora.2.10.2"
-   instance_class       = "db.t3.micro"
-   skip_final_snapshot  = true
- }
-}
-
-elasticache = {
-    ec1 = {
-      engine          = "redis"
-      engine_version  = "6.2"
-      node_type       = "cache.t3.micro"
-      num_cache_nodes = 1
-    }
-}
-
-rabbitmq = {
-  mq1 = {
-    instance_type ="t3.micro"
-  }
-}
-
-apps = {
-  cart ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 100
-    type               = "backend"
-  }
-
-  catalogue ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 101
-    type               = "backend"
-  }
-  user ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 102
-    type               = "backend"
-  }
-  shipping ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 103
-    type               = "backend"
-  }
-  payment ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 104
-    type               = "backend"
-  }
-
-  frontend ={
-    instance_type      = "t3.micro"
-    max_size           = 1
-    min_size           = 1
-    port_no            = 8080
-    lb_listener_priority = 100
-    type               = "backend"
-    public_dns_name    = "dev"
-  }
-
-}
-
-alb = {
-  public ={
-    internal = false
-
-  }
-  private = {
-    internal = true
-  }
-
-}
-BASTION_NODE = "172.31.2.185/32"
-PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
-PUBLIC_ZONE_ID  = ""
-PROMETHEUES_NODE = "172.31.3.144"
+#rds = {
+# db1 = {
+#   allocated_storage    = 10
+#   engine               = "mysql"
+#   engine_version       = "5.7.mysql_aurora.2.10.2"
+#   instance_class       = "db.t3.micro"
+#   skip_final_snapshot  = true
+# }
+#}
+#
+#elasticache = {
+#    ec1 = {
+#      engine          = "redis"
+#      engine_version  = "6.2"
+#      node_type       = "cache.t3.micro"
+#      num_cache_nodes = 1
+#    }
+#}
+#
+#rabbitmq = {
+#  mq1 = {
+#    instance_type ="t3.micro"
+#  }
+#}
+#
+#apps = {
+#  cart ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 100
+#    type               = "backend"
+#  }
+#
+#  catalogue ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 101
+#    type               = "backend"
+#  }
+#  user ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 102
+#    type               = "backend"
+#  }
+#  shipping ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 103
+#    type               = "backend"
+#  }
+#  payment ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 104
+#    type               = "backend"
+#  }
+#
+#  frontend ={
+#    instance_type      = "t3.micro"
+#    max_size           = 1
+#    min_size           = 1
+#    port_no            = 8080
+#    lb_listener_priority = 100
+#    type               = "backend"
+#    public_dns_name    = "dev"
+#  }
+#
+#}
+#
+#alb = {
+#  public ={
+#    internal = false
+#
+#  }
+#  private = {
+#    internal = true
+#  }
+#
+#}
+#BASTION_NODE = "172.31.2.185/32"
+#PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
+#PUBLIC_ZONE_ID  = ""
+#PROMETHEUES_NODE = "172.31.3.144"
