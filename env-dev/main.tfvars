@@ -55,73 +55,84 @@ rds = {
  }
 }
 
-#elasticache = {
-#    ec1 = {
-#      engine          = "redis"
-#      engine_version  = "6.2"
-#      node_type       = "cache.t3.micro"
-#      num_cache_nodes = 1
-#    }
-#}
-#
-#rabbitmq = {
-#  mq1 = {
-#    instance_type ="t3.micro"
-#  }
-#}
+elasticache = {
+    ec1 = {
+      engine          = "redis"
+      engine_version  = "6.2"
+      node_type       = "cache.t3.micro"
+      num_cache_nodes = 1
+    }
+}
 
-#apps = {
-#  cart ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#
-#  catalogue ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#  user ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#  shipping ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#  payment ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#
-#  frontend ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
-#    port_no            = 8080
-#  }
-#
-#}
-#
-#alb = {
-#  public ={
-#    internal = false
-#
-#  }
-#  private = {
-#    internal = true
-#  }
-#
-#}
-#BASTION_NODE = "172.31.2.185/32"
-#PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
-#PROMETHEUES_NODE = "172.31.3.144"
+rabbitmq = {
+  mq1 = {
+    instance_type ="t3.micro"
+  }
+}
+
+apps = {
+  cart ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 100
+    type               = "backend"
+  }
+
+  catalogue ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 101
+    type               = "backend"
+  }
+  user ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 102
+    type               = "backend"
+  }
+  shipping ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 103
+    type               = "backend"
+  }
+  payment ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 104
+    type               = "backend"
+  }
+
+  frontend ={
+    instance_type      = "t3.micro"
+    max_size           = 1
+    min_size           = 1
+    port_no            = 8080
+    lb_listener_priority = 0
+  }
+
+}
+
+alb = {
+  public ={
+    internal = false
+
+  }
+  private = {
+    internal = true
+  }
+
+}
+BASTION_NODE = "172.31.2.185/32"
+PRIVATE_ZONE_ID = "Z06673721B1UWMF4JE9AS"
+PROMETHEUES_NODE = "172.31.3.144"
