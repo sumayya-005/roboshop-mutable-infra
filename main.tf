@@ -54,8 +54,8 @@ module "elasticache" {
 #  name = each.key
 #  instance_type =each.value.instance_type
 #}
-#
-#
+
+
 #module "apps" {
 #  source  = "./vendor/modules/app-setup"
 #  env     = var.env
