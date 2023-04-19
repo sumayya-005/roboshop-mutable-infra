@@ -70,11 +70,13 @@ rabbitmq = {
   }
 }
 
-#apps = {
-#  cart ={
-#    instance_type      = "t3.micro"
-#    max_size           = 1
-#    min_size           = 1
+apps = {
+  cart = {
+    instance_type = "t3.micro"
+    max_size      = 1
+    min_size      = 1
+  }
+}
 #    port_no            = 8080
 #    lb_listener_priority = 100
 #    type               = "backend"
