@@ -67,7 +67,7 @@ module "apps" {
   name          = each.key
   instance_type = each.value.instance_type
   min_size      = each.value.min_size
-  max_size      = each.value.max.size
+  max_size      = each.value.max_size
 }
 #  lb_listener_priority = each.value.lb_listener_priority
 #  type            = each.value.type
