@@ -56,7 +56,7 @@ module "rabbitmq" {
 }
 
 
-module "apps" {
+module"apps" {
   source  = "./vendor/modules/app-setup"
   env     = var.env
   subnets = each.key =="frontend" ? flatten([
