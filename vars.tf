@@ -9,5 +9,4 @@ variable "apps" {}
 #variable "alb" {}
 variable "BASTION_NODE" {}
 variable "private_zone_id" {}
-variable "vpc_cidr" {}
 #variable "PROMETHEUES_NODE" {}
