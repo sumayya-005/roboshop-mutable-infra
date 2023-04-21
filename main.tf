@@ -8,6 +8,7 @@ module "vpc" {
   subnet_availability_zones = each.value.subnet_availability_zones
   env                       = var.env
   management_vpc            = var.management_vpc
+  private_zone_id           = var.private_zone_id
 }
 
 module "docdb" {
