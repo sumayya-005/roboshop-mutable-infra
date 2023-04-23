@@ -75,7 +75,7 @@ apps = {
     instance_type = "t3.micro"
     max_size      = 1
     min_size      = 1
-    app_port_no       = 8080
+    app_port_no   = 8080
 #    lb_listener_priority = 100
 #    type               = "backend"
   }
@@ -84,7 +84,7 @@ apps = {
       instance_type      = "t3.micro"
       max_size           = 1
       min_size           = 1
-      app_port_no              = 8080
+      app_port_no        = 8080
 #      lb_listener_priority = 101
 #      type               = "backend"
     }
@@ -92,7 +92,7 @@ apps = {
       instance_type      = "t3.micro"
       max_size           = 1
       min_size           = 1
-      app_port_no             = 8080
+      app_port_no        = 8080
 #      lb_listener_priority = 102
 #      type               = "backend"
     }
@@ -100,7 +100,7 @@ apps = {
       instance_type      = "t3.micro"
       max_size           = 1
       min_size           = 1
-      app_port_no             = 8080
+      app_port_no        = 8080
 #      lb_listener_priority = 103
 #      type               = "backend"
     }
@@ -108,7 +108,7 @@ apps = {
       instance_type      = "t3.micro"
       max_size           = 1
       min_size           = 1
-      app_port_no              = 8080
+      app_port_no        = 8080
 #      lb_listener_priority = 104
 #      type               = "backend"
     }
@@ -117,7 +117,7 @@ apps = {
       instance_type      = "t3.micro"
       max_size           = 1
       min_size           = 1
-      app_port_no            = 8080
+      app_port_no        = 8080
 #      lb_listener_priority = 100
 #      type               = "backend"
 #      public_dns_name    = "dev"
@@ -125,17 +125,18 @@ apps = {
 
   }
 
-#
-#alb = {
-#  public ={
-#    internal = false
-#
-#  }
-#  private = {
-#    internal = true
-#  }
-#
-#}
+
+alb = {
+  alb1={}
+  public ={
+    internal = false
+
+  }
+  private = {
+    internal = true
+  }
+
+}
 BASTION_NODE = "172.31.2.185/32"
 private_zone_id = "Z06673721B1UWMF4JE9AS"
 #PUBLIC_ZONE_ID  = ""

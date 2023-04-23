@@ -6,7 +6,6 @@ variable "rds" {}
 variable "elasticache" {}
 variable "rabbitmq" {}
 variable "apps" {}
-#variable "alb" {}
 variable "BASTION_NODE" {}
-#variable "private_zone_id" {}
 variable "PROMETHEUES_NODE" {}
+variable "alb" {}
