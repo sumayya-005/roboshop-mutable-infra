@@ -61,7 +61,7 @@ module"apps" {
   source  = "./vendor/modules/app-setup"
   env     = var.env
   subnets = each.key =="frontend" ? flatten([for i, j in module.vpc : j.private_subnets["frontend"]["subnets"][*]
-  .id]) : flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
+  .id]) : flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
   for_each        = var.apps
   name            = each.key
   instance_type   = each.value.instance_type
@@ -72,7 +72,7 @@ module"apps" {
   app_port_no     = each.value.app_port_no
   PROMETHEUS_NODE = var.PROMETHEUES_NODE
   vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
-  private_zone_id = var.private_zone_id
+#  private_zone_id = var.private_zone_id
 }
 #  lb_listener_priority = each.value.lb_listener_priority
 #  type            = each.value.type
