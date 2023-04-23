@@ -16,11 +16,11 @@ locals {
   alb = {
     public = {
       vpc_cidr = "0.0.0.0/0"
-      subnets  = flatten([for i, j in module.vpc : j.public_subnets["public"]["subnets"][*].id])
+#      subnets  = flatten([for i, j in module.vpc : j.public_subnets["public"]["subnets"][*].id])
     }
     private = {
       vpc_cidr = element([for i, j in module.vpc : j.vpc_cidr], 0)
-      subnets  = flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
+#      subnets  = flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
     }
   }
   merged_alb = tomap({
