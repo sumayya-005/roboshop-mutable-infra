@@ -9,3 +9,4 @@ variable "apps" {}
 variable "BASTION_NODE" {}
 variable "PROMETHEUES_NODE" {}
 variable "alb" {}
+variable "private_zone_id" {}
