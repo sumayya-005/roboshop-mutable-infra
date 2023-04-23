@@ -9,4 +9,4 @@ variable "apps" {}
 #variable "alb" {}
 variable "BASTION_NODE" {}
 variable "private_zone_id" {}
-#variable "PROMETHEUES_NODE" {}
+variable "PROMETHEUES_NODE" {}
