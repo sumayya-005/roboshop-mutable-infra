@@ -126,16 +126,16 @@ apps = {
 
 
 
-#alb = {
-#  public ={
-#    internal = false
-#
-#  }
-#  private = {
-#    internal = true
-#  }
-#
-#}
+alb = {
+  public ={
+    internal = false
+
+  }
+  private = {
+    internal = true
+  }
+
+}
 BASTION_NODE = "172.31.2.185/32"
 private_zone_id = "Z06673721B1UWMF4JE9AS"
 #PUBLIC_ZONE_ID  = ""
