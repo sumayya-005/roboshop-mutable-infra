@@ -95,7 +95,7 @@ apps = {
       app_port_no        = 8080
 ##      lb_listener_priority = 102
 ##      type               = "backend"
-#    }
+    }
     shipping ={
       instance_type      = "t3.micro"
       max_size           = 1
