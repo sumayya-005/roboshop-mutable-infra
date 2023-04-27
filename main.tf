@@ -87,17 +87,17 @@ module"apps" {
 #  public_zone_id   = var.public_zone_id
 #}
 #
-module "alb" {
-  source         = "./vendor/modules/alb"
-  for_each       = var.alb
-  env            = var.env
-  name           = each.key
-  public_subnets = flatten([for i, j in module.vpc : j.public_subnets["public"]["subnets"][*].id])
-  private_subnets =flatten([for i, j in module.vpc : j.private_subnets["private"]["subnets"][*].id])
-#  subnets        = each.value.subnets
-  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
-  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
-  internal       = each.value.internal
-}
+#module "alb" {
+#  source         = "./vendor/modules/alb"
+#  for_each       = var.alb
+#  env            = var.env
+#  name           = each.key
+#  public_subnets = flatten([for i, j in module.vpc : j.public_subnets["public"]["subnets"][*].id])
+#  private_subnets =flatten([for i, j in module.vpc : j.private_subnets["private"]["subnets"][*].id])
+##  subnets        = each.value.subnets
+#  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
+#  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
+#  internal       = each.value.internal
+#}
 
 #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
