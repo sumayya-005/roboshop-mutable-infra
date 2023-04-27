@@ -75,19 +75,19 @@ apps = {
     instance_type = "t3.micro"
     max_size      = 1
     min_size      = 1
-#    app_port_no   = 8080
+    app_port_no   = 8080
 #    lb_listener_priority = 100
 #    type               = "backend"
   }
 
-#    catalogue ={
-#      instance_type      = "t3.micro"
-#      max_size           = 1
-#      min_size           = 1
-#      app_port_no        = 8080
-##      lb_listener_priority = 101
-##      type               = "backend"
-#    }
+    catalogue ={
+      instance_type      = "t3.micro"
+      max_size           = 1
+      min_size           = 1
+      app_port_no        = 8080
+#      lb_listener_priority = 101
+#      type               = "backend"
+    }
 #    user ={
 #      instance_type      = "t3.micro"
 #      max_size           = 1
