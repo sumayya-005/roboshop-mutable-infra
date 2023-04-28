@@ -77,7 +77,7 @@ module"apps" {
   type            = each.value.type
   alb             = module.alb
   public_dns_name   = each.value.public_dns_name
-  public_zone_id   = var.public_zone_id
+  public_zone_id   = each.value.public_zone_id
 }
 
 module "alb" {
