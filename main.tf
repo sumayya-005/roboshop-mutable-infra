@@ -80,13 +80,6 @@ module"apps" {
   public_zone_id   = var.public_zone_id
 }
 
-
-
-
-
-
-
-
 module "alb" {
   source         = "./vendor/modules/alb"
   for_each       = var.alb
