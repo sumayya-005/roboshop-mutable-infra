@@ -69,8 +69,9 @@ module"apps" {
   instance_type = each.value.instance_type
   min_size      = each.value.min_size
   max_size      = each.value.max_size
+  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
 }
-#  vpc_id          = element([for i, j in module.vpc : j.vpc_id], 0)
+
 #  BASTION_NODE    = var.BASTION_NODE
 #  app_port_no     = each.value.app_port_no
 #  PROMETHEUS_NODE = var.PROMETHEUES_NODE
