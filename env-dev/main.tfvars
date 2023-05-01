@@ -79,64 +79,64 @@ apps = {
     #    lb_listener_priority = 100
     #    type               = "backend"
   }
-
-  catalogue = {
-    instance_type = "t3.micro"
-    max_size      = 1
-    min_size      = 1
-    app_port_no   = 8080
-    #      lb_listener_priority = 101
-    #      type               = "backend"
-  }
-  user = {
-    instance_type = "t3.micro"
-    max_size      = 1
-    min_size      = 1
-    app_port_no   = 8080
-    ##      lb_listener_priority = 102
-    ##      type               = "backend"
-  }
-  shipping = {
-    instance_type = "t3.micro"
-    max_size      = 1
-    min_size      = 1
-    app_port_no   = 8080
-    lb_listener_priority = 103
-    type               = "backend"
-  }
-  payment = {
-    instance_type = "t3.micro"
-    max_size      = 1
-    min_size      = 1
-    app_port_no   = 8080
-    lb_listener_priority = 104
-    type               = "backend"
-  }
-  #
-  frontend = {
-    instance_type = "t3.micro"
-    max_size      = 1
-    min_size      = 1
-    app_port_no   = 8080
-    lb_listener_priority = 100
-    type               = "backend"
-    public_dns_name    = "dev"
-  }
+#
+#  catalogue = {
+#    instance_type = "t3.micro"
+#    max_size      = 1
+#    min_size      = 1
+#    app_port_no   = 8080
+#    #      lb_listener_priority = 101
+#    #      type               = "backend"
+#  }
+#  user = {
+#    instance_type = "t3.micro"
+#    max_size      = 1
+#    min_size      = 1
+#    app_port_no   = 8080
+#    ##      lb_listener_priority = 102
+#    ##      type               = "backend"
+#  }
+#  shipping = {
+#    instance_type = "t3.micro"
+#    max_size      = 1
+#    min_size      = 1
+#    app_port_no   = 8080
+#    lb_listener_priority = 103
+#    type               = "backend"
+#  }
+#  payment = {
+#    instance_type = "t3.micro"
+#    max_size      = 1
+#    min_size      = 1
+#    app_port_no   = 8080
+#    lb_listener_priority = 104
+#    type               = "backend"
+#  }
+#  #
+#  frontend = {
+#    instance_type = "t3.micro"
+#    max_size      = 1
+#    min_size      = 1
+#    app_port_no   = 8080
+#    lb_listener_priority = 100
+#    type               = "backend"
+#    public_dns_name    = "dev"
+#  }
 }
 
 
 
-alb = {
-  public ={
-    internal = false
-
-  }
-  private = {
-    internal = true
-  }
-
-}
-BASTION_NODE = "172.31.2.185/32"
+#alb = {
+#  public ={
+#    internal = false
+#
+#  }
+#  private = {
+#    internal = true
+#  }
+#
+#}
+#BASTION_NODE = "172.31.2.185/32"
 private_zone_id = "Z06673721B1UWMF4JE9AS"
 #PUBLIC_ZONE_ID  = ""
-PROMETHEUES_NODE = "172.31.3.144/32"
+#PROMETHEUES_NODE = "172.31.3.144/32"
