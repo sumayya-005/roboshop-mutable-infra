@@ -56,12 +56,12 @@ rds = {
 
 
 elasticache = {
-    ec1 = {
+  ec1 = {
       engine          = "redis"
       engine_version  = "6.2"
       node_type       = "cache.t3.micro"
       num_cache_nodes = 1
-    }
+  }
 }
 
 rabbitmq = {
