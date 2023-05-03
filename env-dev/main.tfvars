@@ -115,7 +115,7 @@ apps = {
     #    lb_listener_priority = 104
     #    type               = "backend"
     }
-    #  #
+
       frontend = {
         instance_type = "t3.micro"
         max_size      = 1

@@ -62,16 +62,15 @@ module"apps" {
   env     = var.env
   subnets = each.key =="frontend" ? flatten([
   for i, j in module.vpc : j.private_subnets["frontend"]["subnets"][*]
-  .id
-  ]) : flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
+  .id]) : flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
   for_each      = var.apps
   name          = each.key
   instance_type = each.value.instance_type
   min_size      = each.value.min_size
   max_size      = each.value.max_size
   vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
-  BASTION_NODE    = var.BASTION_NODE
-  app_port_no     = each.value.app_port_no
+  BASTION_NODE  = var.BASTION_NODE
+  app_port_no   = each.value.app_port_no
   PROMETHEUS_NODE = var.PROMETHEUES_NODE
   vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
   private_zone_id = var.private_zone_id
@@ -95,4 +94,3 @@ module"apps" {
 #  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
 #  internal       = each.value.internal
 #}
-
