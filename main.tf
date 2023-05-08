@@ -82,13 +82,36 @@ module"apps" {
 #  public_zone_id   = each.value.public_zone_id
 #}
 
-module "alb" {
-  source         = "./vendor/modules/alb"
-  for_each       = var.alb
-  env            = var.env
-  name           = each.key
-#  subnets        = each.value.subnets
-  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
-  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
-  internal       = each.value.internal
+locals {
+  alb = {
+    public = {
+      vpc_cidr = "0.0.0.0/0"
+#      subnets  = flatten([for i, j in module.vpc : j.public_subnets["public"]["subnets"][*].id])
+    }
+    private = {
+      vpc_cidr = element([for i, j in module.vpc : j.vpc_cidr], 0)
+#      subnets  = flatten([for i, j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
+    }
+  }
+  merged_alb = tomap({
+    for i in keys(var.alb) : i => {
+      internal = var.alb[i].internal
+      vpc_cidr = local.alb[i].vpc_cidr
+    #    subnets  = local.alb[i].subnets
+  }
+  })
+}
+#module "alb" {
+#  source         = "./vendor/modules/alb"
+#  for_each       = var.alb
+#  env            = var.env
+#  name           = each.key
+##  subnets        = each.value.subnets
+#  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
+#  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
+#  internal       = each.value.internal
+#}
+
+output "test" {
+  value = local.merged_alb
 }
