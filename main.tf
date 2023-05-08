@@ -82,13 +82,13 @@ module"apps" {
 #  public_zone_id   = each.value.public_zone_id
 #}
 
-#module "alb" {
-#  source         = "./vendor/modules/alb"
-#  for_each       = var.alb
-#  env            = var.env
-#  name           = each.key
-#  subnets        = each.value.subnets
-#  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
-#  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
-#  internal       = each.value.internal
-#}
+module "alb" {
+  source         = "./vendor/modules/alb"
+  for_each       = var.alb
+  env            = var.env
+  name           = each.key
+  subnets        = each.value.subnets
+  vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
+  vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
+  internal       = each.value.internal
+}
