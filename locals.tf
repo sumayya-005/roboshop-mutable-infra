@@ -24,10 +24,10 @@ locals {
     }
   }
   merged_alb = tomap({
-  for i in keys(var.alb) : i => {
-    internal = var.alb[i].internal
-    vpc_cidr = local.alb[i].vpc_cidr
+   for i in keys(var.alb) : i => {
+     internal = var.alb[i].internal
+     vpc_cidr = local.alb[i].vpc_cidr
     #    subnets  = local.alb[i].subnets
-  }
+   }
   })
 }
