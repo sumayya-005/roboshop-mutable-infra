@@ -112,7 +112,7 @@ module "alb" {
 #  subnets        = each.value.subnets
   vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
   vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
-  internal       = each.value.internal
+#  internal       = each.value.internal
 }
 
 #output "test" {
