@@ -78,8 +78,9 @@ module "apps" {
   public_dns_name      = try(each.value.public_dns_name, null)
   public_zone_id       = var.public_zone_id
   ACM_ARN              = var.ACM_ARN
-
 }
+
+
 module "alb" {
   source         = "./vendor/modules/alb"
   for_each       = local.merged_alb
