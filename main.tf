@@ -71,7 +71,7 @@ module "apps" {
   vpc_id               = element([for i, j in module.vpc : j.vpc_id], 0)
   BASTION_NODE         = var.BASTION_NODE
   app_port_no          = each.value.app_port_no
-  PROMETHEUS_NODE      = var.PROMETHEUS_NODE
+  PROMETHEUS_NODE      = var.ROMETHEUS_NODE
   vpc_cidr             = element([for i, j in module.vpc : j.vpc_cidr], 0)
   alb                  = module.alb
   private_zone_id      = var.private_zone_id
@@ -89,5 +89,6 @@ module "alb" {
   vpc_id         = element([for i, j in module.vpc : j.vpc_id], 0)
   vpc_cidr       = element([for i, j in module.vpc : j.vpc_cidr], 0)
   internal       = each.value.internal
+  ACM_ARN        = var.ACM_ARN
 }
 
