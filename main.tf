@@ -86,7 +86,7 @@ module"apps" {
 
 module "alb" {
   source         = "./vendor/modules/alb"
-  for_each       = var.alb
+  for_each       = local.merged_alb
   env            = var.env
   name            = each.key
 #  private_subnets = flatten([for i,j in module.vpc : j.private_subnets["app"]["subnets"][*].id])
