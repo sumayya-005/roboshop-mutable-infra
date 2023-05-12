@@ -125,7 +125,7 @@ apps = {
         app_port_no   = 80
         lb_listener_priority = 100
         type               = "frontend"
-    #    public_dns_name    = "dev"
+        public_dns_name    = "dev"
     }
 
   }
