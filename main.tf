@@ -72,12 +72,13 @@ module"apps" {
   PROMETHEUS_NODE = var.PROMETHEUES_NODE
   vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
   private_zone_id = var.private_zone_id
+  alb             = module.alb
 }
 
 
 #  lb_listener_priority = each.value.lb_listener_priority
 #  type            = each.value.type
-#  alb             = module.alb
+
 #  public_dns_name   = try(each.value.public_dns_name,null)
 #  public_zone_id   = each.value.public_zone_id
 #}
