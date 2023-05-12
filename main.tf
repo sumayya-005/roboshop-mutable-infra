@@ -75,8 +75,8 @@ module"apps" {
   alb             = module.alb
   lb_listener_priority = each.value.lb_listener_priority
   type            = each.value.type
-  public_dns_name   = each.value.public_dns_name
-  public_zone_id   = each.value.public_zone_id
+  public_dns_name   = try(each.value.public_dns_name,null)
+  public_zone_id   = var.public_zone_id
 }
 
 module "alb" {
