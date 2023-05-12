@@ -56,7 +56,7 @@ module "rabbitmq" {
   instance_type =each.value.instance_type
 }
 
-module"apps" {
+module "apps" {
   source  = "./vendor/modules/app-setup"
   env     = var.env
   subnets = each.key =="frontend" ? flatten([ for i, j in module.vpc : j.private_subnets["frontend"]["subnets"][*]
@@ -76,7 +76,7 @@ module"apps" {
   lb_listener_priority = each.value.lb_listener_priority
   type            = each.value.type
   public_dns_name   = try(each.value.public_dns_name,null)
-#  public_zone_id   = var.public_zone_id
+  public_zone_id   = var.public_zone_id
 }
 
 module "alb" {
