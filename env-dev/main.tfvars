@@ -134,7 +134,13 @@ apps = {
 
 
 alb = {
- alb1 ={}
+ public = {
+   internal = false
+ }
+
+  private ={
+    internal = true
+  }
 }
 
 BASTION_NODE = "172.31.2.185/32"
