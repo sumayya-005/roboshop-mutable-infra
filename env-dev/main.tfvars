@@ -78,8 +78,8 @@ apps = {
     max_size      = 1
     min_size      = 1
     app_port_no   = 8080
-    #    lb_listener_priority = 100
-    #    type               = "backend"
+    lb_listener_priority = 100
+    type               = "backend"
 
   }
    catalogue = {
@@ -87,8 +87,8 @@ apps = {
         max_size      = 1
         min_size      = 1
         app_port_no   = 8080
-    #    #      lb_listener_priority = 101
-    #    #      type               = "backend"
+        lb_listener_priority = 101
+        type               = "backend"
      }
 
   user = {
@@ -96,8 +96,8 @@ apps = {
         max_size      = 1
         min_size      = 1
         app_port_no   = 8080
-    #    ##      lb_listener_priority = 102
-    #    ##      type               = "backend"
+        lb_listener_priority = 102
+        type               = "backend"
   }
 
       shipping = {
@@ -105,8 +105,8 @@ apps = {
         max_size      = 1
         min_size      = 1
         app_port_no   = 8080
-    #    lb_listener_priority = 103
-    #    type               = "backend"
+        lb_listener_priority = 103
+        type               = "backend"
       }
 
       payment = {
@@ -114,8 +114,8 @@ apps = {
         max_size      = 1
         min_size      = 1
         app_port_no   = 8080
-    #    lb_listener_priority = 104
-    #    type               = "backend"
+        lb_listener_priority = 104
+        type               = "backend"
     }
 
       frontend = {
@@ -123,8 +123,8 @@ apps = {
         max_size      = 1
         min_size      = 1
         app_port_no   = 80
-    #    lb_listener_priority = 100
-    #    type               = "backend"
+        lb_listener_priority = 0
+        type               = "frontend"
     #    public_dns_name    = "dev"
     }
 
