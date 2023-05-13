@@ -74,8 +74,8 @@ module "apps" {
   private_zone_id = var.private_zone_id
   alb             = module.alb
   lb_listener_priority = each.value.lb_listener_priority
-  type            = each.value.type
-  public_dns_name   = each.value.public_dns_name
+  type              = each.value.type
+  public_dns_name   = try(each.value.public_dns_name,null)
   public_zone_id   = var.public_zone_id
   ACM_ARN          = var.ACM_ARN
 
