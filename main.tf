@@ -18,8 +18,8 @@ module "docdb" {
   engine   = each.value.engine
   env      = var.env
   subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
- nodes     = each.value.nodes
-  skip_final_snapshot = each.value.skip_final_snapshot
+# nodes     = each.value.nodes
+#  skip_final_snapshot = each.value.skip_final_snapshot
 
 }
 
