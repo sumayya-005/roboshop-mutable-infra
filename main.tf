@@ -36,10 +36,11 @@ module "rds"{
   engine              = each.value.engine
   engine_version      = each.value.engine_version
   instance_class      = each.value.instance_class
-  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
-  vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
 #  parameter_group_name = each.value.parameter_group_name
   skip_final_snapshot = each.value.skip_final_snapshot
+  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
+  vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
+  BASTION_NODE  = var.BASTION_NODE
 }
 
 module "elasticache" {
@@ -52,6 +53,8 @@ module "elasticache" {
   engine_version  = each.value. engine_version
   node_type       = each.value.node_type
   num_cache_nodes = each.value.num_cache_nodes
+  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
+  vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
 }
 
 module "rabbitmq" {
