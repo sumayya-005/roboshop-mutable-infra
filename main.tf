@@ -20,9 +20,9 @@ module "docdb" {
   subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
  nodes     = each.value.nodes
   skip_final_snapshot = each.value.skip_final_snapshot
-#  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
-#  vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
-#  BASTION_NODE  = var.BASTION_NODE
+  vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
+  vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
+  BASTION_NODE  = var.BASTION_NODE
 }
 
 
