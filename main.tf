@@ -41,6 +41,7 @@ module "rds"{
   vpc_id        = element([for i, j in module.vpc : j.vpc_id], 0)
   vpc_cidr        = element([for i, j in module.vpc : j.vpc_id], 0)
   BASTION_NODE  = var.BASTION_NODE
+  nodes         =each.value.nodes
 }
 
 module "elasticache" {
