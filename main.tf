@@ -65,6 +65,7 @@ module "rabbitmq" {
   subnets  = flatten([for i, j in module.vpc : j.private_subnets["database"]["subnets"][*].id])
   name     = each.key
   instance_type =each.value.instance_type
+  private_zone_id = var.private_zone_id
 }
 
 module "apps" {
