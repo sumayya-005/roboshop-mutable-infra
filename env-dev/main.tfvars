@@ -159,4 +159,4 @@ private_zone_id = "Z06673721B1UWMF4JE9AS"
 public_zone_id  = "Z0163067N3HRBSRG5NCD"
 PROMETHEUS_NODE = "172.31.3.144/32"
 
-#ACM_ARN = "arn:aws:acm:us-east-1:877644139659:certificate/8daf2799-5cb2-4031-93f0-bf33902bc7ed"
+ACM_ARN = "arn:aws:acm:us-east-1:877644139659:certificate/8daf2799-5cb2-4031-93f0-bf33902bc7ed"
